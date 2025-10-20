@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechBrain | Connect With Me</title>
+  <meta name="description" content="Tech-themed design with links to YouTube, GitHub, Instagram, and direct contact." />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{height:100%;font-family:'Poppins',sans-serif;color:#f0f9ff;background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}header{position:sticky;top:0;background:rgba(0,0,0,0.3);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.2);z-index:50}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;}
+.brand{font-weight:700;font-size:1.3rem;color:#f0f9ff;}
+.nav-links{display:flex;gap:20px;}
+.btn{padding:10px 18px;border-radius:12px;background:rgba(0,150,136,0.7);color:#fff;font-weight:600;transition:0.3s}
+.btn:hover{background:rgba(0,150,136,1);}
+
+main{padding:60px 0;backdrop-filter:blur(6px)}
+section{margin-bottom:60px}
+
+.container{width:min(1100px,90%);margin:auto;}
+
+.card{background:rgba(255,255,255,0.12);border-radius:16px;padding:24px;margin-bottom:24px;color:#e0f7fa;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:transform 0.3s;}
+.card:hover{transform:translateY(-5px);}
+
+h1,h2,h3{color:#ffffff;text-shadow:0 2px 6px rgba(0,0,0,0.4);}
+
+.hero{text-align:center;padding:80px 0;}
+.hero h1{font-size:2.5rem;margin-bottom:12px;}
+.hero p{color:#cde9ff;font-size:1.1rem;margin-bottom:20px;}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+
+.feature{border-radius:16px;padding:24px;text-align:center;color:#fff;transition:transform 0.3s;display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:300px;}
+.feature:hover{transform:translateY(-5px);}
+
+.youtube{background:rgba(255,0,0,0.25);border:1px solid rgba(255,0,0,0.3);}
+.github{background:rgba(36,41,46,0.4);border:1px solid rgba(255,255,255,0.1);}
+.instagram{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;}
+.contact{background:rgba(0,150,136,0.4);border:1px solid rgba(255,255,255,0.2);}
+
+footer{text-align:center;padding:24px 0;color:#cde9ff;background:rgba(0,0,0,0.3);backdrop-filter:blur(8px);}
+
+.contact-btn{display:inline-block;margin-top:10px;padding:10px 18px;border-radius:12px;background:rgba(0,150,136,0.8);color:#fff;font-weight:600;transition:0.3s;}
+.contact-btn:hover{background:rgba(0,150,136,1);}
+
+/* Image Gallery Styles */
+.image-gallery {
+  margin-top: 60px;
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 250px;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+}
+
+/* Animation for images */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-item {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.3s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    padding: 40px 0;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">Tech<span style="color:#00bfa5">Brain</span></div>
+      <div class="nav-links">
+        <a href="#links">Links</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to M M M page 🌿</h1>
+      <p>Stay connected with me through my official social platforms.</p>
+    </section>
+    
+    <section id="links">
+      <h2>My Social Platforms</h2>
+      <div class="features">
+        <div class="feature youtube">
+          <h3>📺 YouTube</h3>
+          <p>Watch my videos and stay updated on my latest uploads.</p>
+          <a class="contact-btn" href="https://youtube.com/@aim_muzammilmujawar6686?si=AwDuwRQKRA1ekn0p" target="_blank">Visit Channel</a>
+        </div>
+
+        <div class="feature github">
+          <h3>💻 GitHub</h3>
+          <p>Explore my coding projects and repositories.</p>
+          <a class="contact-btn" href="https://github.com/muzammil6686" target="_blank">View Profile</a>
+        </div>
+
+        <div class="feature instagram">
+          <h3>📸 Instagram</h3>
+          <p>Follow me on Instagram for daily updates and stories.</p>
+          <a class="contact-btn" href="https://www.instagram.com/muzammilmujawar.6686?igsh=MTJoY3o0b21sbDl1NQ==" target="_blank">Follow Now</a>
+        </div>
+
+        <div class="feature contact">
+          <h3>📞 Contact</h3>
+          <p>Have any questions or want to collaborate? Reach out to me.</p>
+          <a class="contact-btn" href="tel:9136956686">Call Now</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="image-gallery">
+      <h2 class="gallery-title">My Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=500&q=80" alt="Technology" class="gallery-img">
+          <div class="gallery-caption">Technology & Innovation</div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=500&q=80" alt="Coding" class="gallery-img">
+          <div class="gallery-caption">Coding Projects</div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Nature" class="gallery-img">
+          <div class="gallery-caption">Nature Inspiration</div>
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&w=500&q=80" alt="Creative" class="gallery-img">
+          <div class="gallery-caption">Creative Work</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© <span id="year"></span> TechBrain • Designed with 🌿 love by Muzammil Mujawar</p>
+  </footer>
+  
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
